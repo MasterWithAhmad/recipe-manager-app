@@ -1,0 +1,43 @@
+﻿@page "{id:int}"
+@model recipe_manager_app.Pages.Recipes.DetailsModel
+@{
+    ViewData["Title"] = "Recipe Details";
+}
+
+<div class="container">
+    <h1 class="text-center mb-4">@Model.Recipe.Name</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <img src="@Model.Recipe.ImageUrl" class="img-fluid rounded" alt="@Model.Recipe.Name">
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Description</h3>
+                    <p class="card-text">@Model.Recipe.Description</p>
+
+                    <h3 class="card-title">Ingredients</h3>
+                    <p class="card-text">@Model.Recipe.Ingredients</p>
+
+                    <h3 class="card-title">Instructions</h3>
+                    <p class="card-text">@Model.Recipe.Instructions</p>
+
+                    <h3 class="card-title">Details</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-clock"></i> <strong>Cooking Time:</strong> @Model.Recipe.CookingTime minutes</li>
+                        <li><i class="fas fa-tachometer-alt"></i> <strong>Difficulty Level:</strong> @Model.Recipe.DifficultyLevel</li>
+                        <li><i class="fas fa-utensils"></i> <strong>Category:</strong> @Model.Recipe.Category</li>
+                    </ul>
+
+                    <div class="text-center">
+                        <a href="/Recipes/Index" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Back to Recipes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

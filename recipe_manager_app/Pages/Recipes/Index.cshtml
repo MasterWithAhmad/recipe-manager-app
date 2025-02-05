@@ -1,0 +1,296 @@
+﻿@page
+@model recipe_manager_app.Pages.Recipes.IndexModel
+@Html.AntiForgeryToken()
+@{
+    ViewData["Title"] = "Recipes";
+}
+
+
+<div class="text-center mb-4">
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addRecipeModal">
+        <i class="fas fa-plus"></i> Add Recipe
+    </button>
+</div>
+
+
+
+<!-- Add Recipe Modal -->
+<div class="modal fade" id="addRecipeModal" tabindex="-1" aria-labelledby="addRecipeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addRecipeModalLabel">Add Recipe</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addRecipeForm" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Recipe_Name" class="form-label">Recipe Name</label>
+                                <input type="text" id="Recipe_Name" name="Recipe.Name" class="form-control" required />
+                                <div class="invalid-feedback">Please enter a recipe name.</div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="Recipe_Description" class="form-label">Description</label>
+                                <textarea id="Recipe_Description" name="Recipe.Description" class="form-control" rows="3" required></textarea>
+                                <div class="invalid-feedback">Please enter a description.</div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="Recipe_Ingredients" class="form-label">Ingredients</label>
+                                <textarea id="Recipe_Ingredients" name="Recipe.Ingredients" class="form-control" rows="5" required></textarea>
+                                <div class="invalid-feedback">Please enter the ingredients.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Recipe_Instructions" class="form-label">Instructions</label>
+                                <textarea id="Recipe_Instructions" name="Recipe.Instructions" class="form-control" rows="5" required></textarea>
+                                <div class="invalid-feedback">Please enter the instructions.</div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="Recipe_CookingTime" class="form-label">Cooking Time (minutes)</label>
+                                    <input type="number" id="Recipe_CookingTime" name="Recipe.CookingTime" class="form-control" required />
+                                    <div class="invalid-feedback">Please enter the cooking time.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Recipe_DifficultyLevel" class="form-label">Difficulty Level</label>
+                                    <select id="Recipe_DifficultyLevel" name="Recipe.DifficultyLevel" class="form-select" required>
+                                        <option value="">Select</option>
+                                        <option value="Easy">Easy</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Hard">Hard</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a difficulty level.</div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="Recipe_Category" class="form-label">Category</label>
+                                <input type="text" id="Recipe_Category" name="Recipe.Category" class="form-control" required />
+                                <div class="invalid-feedback">Please enter a category.</div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="ImageFile" class="form-label">Recipe Image</label>
+                                <input type="file" id="ImageFile" name="ImageFile" class="form-control" accept="image/*" required />
+                                <div class="invalid-feedback">Please upload an image.</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                @* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button> *@
+                <button type="submit" form="addRecipeForm" class="btn btn-success">
+                    <i class="fas fa-save"></i> Save Recipe
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="input-group">
+            <span class="input-group-text fa-icon-hover">
+                <i class="fas fa-search"></i>
+            </span>
+            <input type="text" id="searchInput" class="form-control" placeholder="Search recipes..." value="@Model.CurrentFilter" />
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="input-group">
+            <span class="input-group-text fa-icon-hover">
+                <i class="fas fa-filter"></i>
+            </span>
+            <select id="categoryFilter" class="form-select">
+                <option value="">All Categories</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="input-group">
+            <span class="input-group-text fa-icon-hover">
+                <i class="fas fa-sort"></i>
+            </span>
+            <select id="sortOrder" class="form-select">
+                <option value="">Sort By</option>
+                <option value="Name">Name (A-Z)</option>
+                <option value="name_desc">Name (Z-A)</option>
+                <option value="CookingTime">Cooking Time (Low to High)</option>
+                <option value="cookingtime_desc">Cooking Time (High to Low)</option>
+                <option value="DifficultyLevel">Difficulty (Easy to Hard)</option>
+                <option value="difficulty_desc">Difficulty (Hard to Easy)</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete Recipe</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this recipe?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="confirmDelete">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    @foreach (var recipe in Model.Recipes)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="@recipe.ImageUrl" class="card-img-top" alt="@recipe.Name" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">@recipe.Name</h5>
+                    <p class="card-text">@recipe.Description</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="/Recipes/Details/@recipe.Id" class="btn btn-primary btn-sm">
+                            <i class="fas fa-eye"></i> View
+                        </a>
+                        <a href="/Recipes/Edit/@recipe.Id" class="btn btn-warning btn-sm">
+                            <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <button class="btn btn-danger btn-sm delete-recipe" data-id="@recipe.Id">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Pagination -->
+<nav>
+    <ul class="pagination justify-content-center">
+        <li class="page-item @(Model.Recipes.HasPreviousPage ? "" : "disabled")">
+            <a class="page-link" href="?pageIndex=@(Model.Recipes.PageIndex - 1)">Previous</a>
+        </li>
+        @for (int i = 1; i <= Model.Recipes.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.Recipes.PageIndex ? "active" : "")">
+                <a class="page-link" href="?pageIndex=@i">@i</a>
+            </li>
+        }
+        <li class="page-item @(Model.Recipes.HasNextPage ? "" : "disabled")">
+            <a class="page-link" href="?pageIndex=@(Model.Recipes.PageIndex + 1)">Next</a>
+        </li>
+    </ul>
+</nav>
+
+
+@section Scripts {
+    <script>
+        // Live search functionality
+           document.getElementById('searchInput').addEventListener('input', function () {
+               const searchTerm = this.value.toLowerCase();
+               const recipeCards = document.querySelectorAll('.card');
+
+               recipeCards.forEach(card => {
+                   const recipeName = card.querySelector('.card-title').textContent.toLowerCase();
+                   if (recipeName.includes(searchTerm)) {
+                       card.style.display = 'block';
+                   } else {
+                       card.style.display = 'none';
+                   }
+               });
+           });
+
+           // Sorting and filtering
+           document.getElementById('sortOrder').addEventListener('change', function () {
+               const sortOrder = this.value;
+               const currentFilter = document.getElementById('searchInput').value;
+               const categoryFilter = document.getElementById('categoryFilter').value;
+               window.location.href = `?sortOrder=${sortOrder}&currentFilter=${currentFilter}&categoryFilter=${categoryFilter}`;
+           });
+
+           document.getElementById('categoryFilter').addEventListener('change', function () {
+               const categoryFilter = this.value;
+               const currentFilter = document.getElementById('searchInput').value;
+               const sortOrder = document.getElementById('sortOrder').value;
+               window.location.href = `?sortOrder=${sortOrder}&currentFilter=${currentFilter}&categoryFilter=${categoryFilter}`;
+           });
+
+
+
+           document.addEventListener('DOMContentLoaded', function () {
+               const deleteButtons = document.querySelectorAll('.delete-recipe');
+               const deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+               let recipeIdToDelete;
+
+               deleteButtons.forEach(button => {
+                   button.addEventListener('click', function () {
+                       recipeIdToDelete = this.getAttribute('data-id');
+                       deleteModal.show();
+                   });
+               });
+
+               document.getElementById('confirmDelete').addEventListener('click', function () {
+                   fetch(`/Recipes/Delete/${recipeIdToDelete}`, {
+                       method: 'POST',
+                       headers: {
+                           'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                       }
+                   }).then(response => {
+                       if (response.ok) {
+                           deleteModal.hide();
+                           window.location.reload();
+                       }
+                   });
+               });
+           });
+
+
+        <script>
+           document.getElementById('addRecipeForm').addEventListener('submit', function (event) {
+               event.preventDefault();
+
+               const formData = new FormData(this);
+
+               fetch('/Recipes/Create', {
+                   method: 'POST',
+                   body: formData,
+                   headers: {
+                       'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                   }
+               }).then(response => {
+                   if (response.ok) {
+                       Swal.fire({
+                           icon: 'success',
+                           title: 'Recipe Added!',
+                           text: 'The recipe has been successfully added.',
+                       }).then(() => {
+                           window.location.reload(); // Reload the page to show the new recipe
+                       });
+                   } else {
+                       Swal.fire({
+                           icon: 'error',
+                           title: 'Error!',
+                           text: 'Something went wrong. Please try again.',
+                       });
+                   }
+               });
+           });
+
+    </script>
+}

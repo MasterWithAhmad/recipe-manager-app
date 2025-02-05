@@ -1,0 +1,113 @@
+﻿@page "{id:int}"
+@model recipe_manager_app.Pages.Recipes.EditModel
+@{
+    ViewData["Title"] = "Edit Recipe";
+}
+
+
+<!-- Title: Edit Recipe Page -->
+<!-- Author: Ahmed Ibrahim Ahmed -->
+<!-- Date: 2025-02-02 -->
+<!-- Description: Allows admins to edit existing recipes. -->
+
+<div id="loading" class="text-center" style="display: none;">
+    <div class="loading-spinner"></div>
+    <p>Loading...</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-10 form-container">
+        <h1 class="text-center mb-4">@ViewData["Title"]</h1>
+        <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="Recipe.Name" class="form-label">Recipe Name</label>
+                        <input asp-for="Recipe.Name" class="form-control" required />
+                        <div class="invalid-feedback">Please enter a recipe name.</div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Recipe.Description" class="form-label">Description</label>
+                        <textarea asp-for="Recipe.Description" class="form-control" rows="3" required></textarea>
+                        <div class="invalid-feedback">Please enter a description.</div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Recipe.Ingredients" class="form-label">Ingredients</label>
+                        <textarea asp-for="Recipe.Ingredients" class="form-control" rows="5" required></textarea>
+                        <div class="invalid-feedback">Please enter the ingredients.</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="Recipe.Instructions" class="form-label">Instructions</label>
+                        <textarea asp-for="Recipe.Instructions" class="form-control" rows="5" required></textarea>
+                        <div class="invalid-feedback">Please enter the instructions.</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="Recipe.CookingTime" class="form-label">Cooking Time (minutes)</label>
+                            <input asp-for="Recipe.CookingTime" class="form-control" type="number" required />
+                            <div class="invalid-feedback">Please enter the cooking time.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Recipe.DifficultyLevel" class="form-label">Difficulty Level</label>
+                            <select asp-for="Recipe.DifficultyLevel" class="form-select" required>
+                                <option value="">Select</option>
+                                <option value="Easy">Easy</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Hard">Hard</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a difficulty level.</div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Recipe.Category" class="form-label">Category</label>
+                        <input asp-for="Recipe.Category" class="form-control" required />
+                        <div class="invalid-feedback">Please enter a category.</div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="ImageFile" class="form-label">Recipe Image</label>
+                        <input asp-for="ImageFile" class="form-control" type="file" accept="image/*" required />
+                        <div class="invalid-feedback">Please upload an image.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-save"></i> Save Recipe
+                </button>
+                <a href="/Recipes/Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        // Show loading spinner during search, filter, or sort
+        document.getElementById('searchInput').addEventListener('input', function () {
+            document.getElementById('loading').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500); // Simulate loading delay
+        });
+
+        document.getElementById('categoryFilter').addEventListener('change', function () {
+            document.getElementById('loading').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500); // Simulate loading delay
+        });
+
+        document.getElementById('sortOrder').addEventListener('change', function () {
+            document.getElementById('loading').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500); // Simulate loading delay
+        });
+    </script>
+}

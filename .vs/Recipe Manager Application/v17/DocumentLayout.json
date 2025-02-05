@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|c:\\users\\ahmad\\onedrive\\desktop\\recipe manager application\\recipe_manager_app\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|solutionrelative:recipe_manager_app\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|c:\\users\\ahmad\\onedrive\\desktop\\recipe manager application\\recipe_manager_app\\pages\\recipes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|solutionrelative:recipe_manager_app\\pages\\recipes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|c:\\users\\ahmad\\onedrive\\desktop\\recipe manager application\\recipe_manager_app\\pages\\recipes\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|solutionrelative:recipe_manager_app\\pages\\recipes\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|c:\\users\\ahmad\\onedrive\\desktop\\recipe manager application\\recipe_manager_app\\pages\\recipes\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|solutionrelative:recipe_manager_app\\pages\\recipes\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|c:\\users\\ahmad\\onedrive\\desktop\\recipe manager application\\recipe_manager_app\\pages\\recipes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|solutionrelative:recipe_manager_app\\pages\\recipes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|c:\\users\\ahmad\\onedrive\\desktop\\recipe manager application\\recipe_manager_app\\pages\\recipes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|solutionrelative:recipe_manager_app\\pages\\recipes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|c:\\users\\ahmad\\onedrive\\desktop\\recipe manager application\\recipe_manager_app\\pages\\recipes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03A2E4F-4B84-4EA9-A58B-6EDD6E316528}|recipe_manager_app\\recipe_manager_app.csproj|solutionrelative:recipe_manager_app\\pages\\recipes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\.gitignore",
+              "RelativeDocumentMoniker": "recipe_manager_app\\.gitignore",
+              "ToolTip": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\.gitignore",
+              "RelativeToolTip": "recipe_manager_app\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001407|",
+              "WhenOpened": "2025-02-05T19:40:23.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Details.cshtml",
+              "RelativeDocumentMoniker": "recipe_manager_app\\Pages\\Recipes\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Details.cshtml",
+              "RelativeToolTip": "recipe_manager_app\\Pages\\Recipes\\Details.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAwBcAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-03T09:40:14.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Create.cshtml",
+              "RelativeDocumentMoniker": "recipe_manager_app\\Pages\\Recipes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Create.cshtml",
+              "RelativeToolTip": "recipe_manager_app\\Pages\\Recipes\\Create.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAFgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-03T01:57:50.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "recipe_manager_app\\Pages\\Recipes\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Create.cshtml.cs",
+              "RelativeToolTip": "recipe_manager_app\\Pages\\Recipes\\Create.cshtml.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T01:57:48.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Index.cshtml",
+              "RelativeDocumentMoniker": "recipe_manager_app\\Pages\\Recipes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Index.cshtml",
+              "RelativeToolTip": "recipe_manager_app\\Pages\\Recipes\\Index.cshtml",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAAABMBAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-03T01:54:54.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "recipe_manager_app\\Pages\\Recipes\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Index.cshtml.cs",
+              "RelativeToolTip": "recipe_manager_app\\Pages\\Recipes\\Index.cshtml.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T14:59:17.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "recipe_manager_app\\Pages\\Recipes\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Ahmad\\OneDrive\\Desktop\\Recipe Manager Application\\recipe_manager_app\\Pages\\Recipes\\Edit.cshtml",
+              "RelativeToolTip": "recipe_manager_app\\Pages\\Recipes\\Edit.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAwHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-02T14:53:09.441Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
